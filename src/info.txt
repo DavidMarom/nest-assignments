@@ -1,0 +1,1 @@
+docker run --hostname=89b576f67b3e --env=MYSQL_ROOT_PASSWORD=aaaa --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --env=GOSU_VERSION=1.19 --env=MYSQL_MAJOR=innovation --env=MYSQL_VERSION=9.5.0-1.el9 --env=MYSQL_SHELL_VERSION=9.5.0-1.el9 --volume=/var/lib/mysql --network=bridge --workdir=/ -p 3307:3306 --restart=no --runtime=runc -d mysql:latest
