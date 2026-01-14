@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { SequelizeModule } from '@nestjs/sequelize';
+// import { SequelizeModule } from '@nestjs/sequelize';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AssignmentsModule } from './assignments/assignments.module';
@@ -9,16 +9,16 @@ import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
-    SequelizeModule.forRoot({
-      dialect: 'postgres', // או mysql / sqlite
-      host: 'localhost',
-      port: 5432,
-      username: 'db_user',
-      password: 'db_pass',
-      database: 'db_name',
-      autoLoadModels: true,
-      synchronize: true, // ⚠️ רק לפיתוח
-    }),
+    // SequelizeModule.forRoot({
+    //   dialect: 'postgres', // או mysql / sqlite
+    //   host: 'localhost',
+    //   port: 5432,
+    //   username: 'db_user',
+    //   password: 'db_pass',
+    //   database: 'db_name',
+    //   autoLoadModels: true,
+    //   synchronize: true, // ⚠️ רק לפיתוח
+    // }),
     AssignmentsModule,
     ShiftsModule,
     UsersModule,

@@ -1,16 +1,11 @@
-import { Module, Controller, Get } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { UsersService } from './users.service';
+import { UsersController } from './users.controller';
 
 @Module({
   providers: [UsersService],
+  controllers: [UsersController],
 })
 class UsersModule {}
 
-@Controller('users')
-class UsersController {
-  @Get()
-  getHello(): string {
-    return 'Hello from UsersController';
-  }
-}
-export { UsersModule, UsersController };
+export { UsersModule };
